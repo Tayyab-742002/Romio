@@ -23,26 +23,15 @@
     ></script>
   </head>
   <body>
-    <!-- Navigation -->
-    <!-- <nav class="navbar">
-      <div class="nav-content">
-        <div class="logo">Roamio</div>
-        <button class="mobile-menu-btn">
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="nav-links">
-          <a href="#home">Home</a>
-          <a href="#destinations">Destinations</a>
-          <a href="#calculator">Trip Calculator</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </div>
-    </nav> -->
     <nav class="navbar">
       <div class="nav-content">
         <div class="logo">
-          <img src="./assets/logo.png" alt="Roamio Logo" class="logo-image" />
+          <img
+            src="./assets/logo.png"
+            alt="Roamio Logo"
+            class="logo-image"
+            loading="lazy"
+          />
           <div class="logo-text"><span class="logo-span">Ro</span>mio</div>
         </div>
         <button class="mobile-menu-btn">
@@ -68,7 +57,7 @@
     </section> -->
     <section class="hero" id="home">
       <div class="hero-video">
-        <video autoplay muted loop playsinline>
+        <video autoplay muted loop playsinline preload="none">
           <source src="./assets/hero-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -340,7 +329,7 @@
           <div class="testimonials-container">
             <div class="testimonial-card active">
               <div class="testimonial-image">
-                <img src="./assets/user1.jpg" alt="User 1" />
+                <img src="./assets/user1.jpg" alt="User 1" loading="lazy" />
               </div>
               <div class="testimonial-content">
                 <p>
@@ -362,7 +351,7 @@
             </div>
             <div class="testimonial-card">
               <div class="testimonial-image">
-                <img src="./assets/user2.jpeg" alt="User 2" />
+                <img src="./assets/user2.jpg" alt="User 2" loading="lazy" />
               </div>
               <div class="testimonial-content">
                 <p>
@@ -385,7 +374,7 @@
             </div>
             <div class="testimonial-card">
               <div class="testimonial-image">
-                <img src="./assets/user3.jpg" alt="User 3" />
+                <img src="./assets/user3.jpg" alt="User 3" loading="lazy" />
               </div>
               <div class="testimonial-content">
                 <p>
