@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wanderlust Travel Agency</title>
+    <!-- AOS CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-content">
+        <div class="logo">Wanderlust</div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#destinations">Destinations</a>
+          <a href="#calculator">Trip Calculator</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- <section class="hero" id="home">
+      <div class="hero-content" data-aos="fade-up">
+        <h1>Explore the World with Us</h1>
+        <p>Discover amazing destinations and create unforgettable memories</p>
+        <button class="btn btn-primary">Plan Your Trip</button>
+      </div>
+    </section> -->
+    <section class="hero" id="home">
+      <div class="hero-video">
+        <video autoplay muted loop playsinline>
+          <source src="./assets/hero-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="hero-content" data-aos="fade-up">
+        <h1>Explore the World with Us</h1>
+        <p>Discover amazing destinations and create unforgettable memories</p>
+        <button class="btn btn-primary">Plan Your Trip</button>
+      </div>
+    </section>
+
+    <section id="destinations" class="section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Popular Destinations</h2>
+        <div class="destinations-grid">
+          <div class="destination-card" data-aos="fade-up">
+            <div
+              class="destination-img"
+              style="background-image: url('./assets/paris.jpg')"
+            >
+              <div class="price">From $999</div>
+            </div>
+            <div class="destination-content">
+              <h3>Paris, France</h3>
+              <p>
+                Experience the magic of the City of Light with our curated Paris
+                packages.
+              </p>
+              <div class="destination-meta">
+                <span><i class="fas fa-clock"></i> 7 Days</span>
+                <span><i class="fas fa-star"></i> 4.8</span>
+              </div>
+              <button class="btn btn-outline">Learn More</button>
+            </div>
+          </div>
+          <!-- More destination cards... -->
+          <div class="destination-card" data-aos="fade-up">
+            <div
+              class="destination-img"
+              style="background-image: url('./assets/japan.jpg')"
+            >
+              <div class="price">From $1,299</div>
+            </div>
+            <div class="destination-content">
+              <h3>Tokyo, Japan</h3>
+              <p>
+                Dive into the vibrant culture and futuristic cityscapes of Tokyo
+                with our tailored tours.
+              </p>
+              <div class="destination-meta">
+                <span><i class="fas fa-clock"></i> 10 Days</span>
+                <span><i class="fas fa-star"></i> 4.9</span>
+              </div>
+              <button class="btn btn-outline">Learn More</button>
+            </div>
+          </div>
+
+          <div class="destination-card" data-aos="fade-up">
+            <div
+              class="destination-img"
+              style="background-image: url('./assets/sydney.jpg')"
+            >
+              <div class="price">From $1,599</div>
+            </div>
+            <div class="destination-content">
+              <h3>Sydney, Australia</h3>
+              <p>
+                Discover the beauty of Sydney, from its iconic Opera House to
+                stunning beaches.
+              </p>
+              <div class="destination-meta">
+                <span><i class="fas fa-clock"></i> 8 Days</span>
+                <span><i class="fas fa-star"></i> 4.7</span>
+              </div>
+              <button class="btn btn-outline">Learn More</button>
+            </div>
+          </div>
+
+          <div class="destination-card" data-aos="fade-up">
+            <div
+              class="destination-img"
+              style="background-image: url('./assets/south-africa.jpg')"
+            >
+              <div class="price">From $899</div>
+            </div>
+            <div class="destination-content">
+              <h3>Cape Town, South Africa</h3>
+              <p>
+                Explore the natural wonders and rich culture of Cape Town with
+                our exclusive deals.
+              </p>
+              <div class="destination-meta">
+                <span><i class="fas fa-clock"></i> 6 Days</span>
+                <span><i class="fas fa-star"></i> 4.6</span>
+              </div>
+              <button class="btn btn-outline">Learn More</button>
+            </div>
+          </div>
+          <div class="destination-card" data-aos="fade-up">
+            <div
+              class="destination-img"
+              style="background-image: url('./assets/italy.jpg')"
+            >
+              <div class="price">From $1,199</div>
+            </div>
+            <div class="destination-content">
+              <h3>Rome, Italy</h3>
+              <p>
+                Walk through history and marvel at the architectural wonders of
+                the Eternal City.
+              </p>
+              <div class="destination-meta">
+                <span><i class="fas fa-clock"></i> 7 Days</span>
+                <span><i class="fas fa-star"></i> 4.9</span>
+              </div>
+              <button class="btn btn-outline">Learn More</button>
+            </div>
+          </div>
+
+          <div class="destination-card" data-aos="fade-up">
+            <div
+              class="destination-img"
+              style="background-image: url('./assets/maldives.jpg')"
+            >
+              <div class="price">From $2,499</div>
+            </div>
+            <div class="destination-content">
+              <h3>Maldives</h3>
+              <p>
+                Escape to paradise with luxurious overwater villas and
+                crystal-clear waters.
+              </p>
+              <div class="destination-meta">
+                <span><i class="fas fa-clock"></i> 5 Days</span>
+                <span><i class="fas fa-star"></i> 5.0</span>
+              </div>
+              <button class="btn btn-outline">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trip Calculator Section -->
+    <section id="calculator" class="section calculator-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Trip Cost Calculator</h2>
+        <div class="calculator-container" data-aos="fade-up">
+          <form id="tripCalculator" class="calculator-form">
+            <div class="form-group">
+              <label for="destination">Select Destination</label>
+              <select id="destination" required>
+                <option value="">Choose a destination</option>
+                <option value="paris">Paris, France</option>
+                <option value="tokyo">Tokyo, Japan</option>
+                <option value="bali">Bali, Indonesia</option>
+                <option value="nyc">New York City, USA</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="travelers">Number of Travelers</label>
+              <input type="number" id="travelers" min="1" required />
+            </div>
+
+            <div class="form-group">
+              <label for="duration">Duration (Days)</label>
+              <input type="number" id="duration" min="1" required />
+            </div>
+
+            <div class="form-group">
+              <label for="accommodation">Accommodation Type</label>
+              <select id="accommodation" required>
+                <option value="budget">Budget (3-star)</option>
+                <option value="standard">Standard (4-star)</option>
+                <option value="luxury">Luxury (5-star)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Additional Services</label>
+              <div class="checkbox-group">
+                <label> <input type="checkbox" id="guide" /> Tour Guide </label>
+                <label>
+                  <input type="checkbox" id="transport" /> Airport Transfer
+                </label>
+                <label>
+                  <input type="checkbox" id="insurance" /> Travel Insurance
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Calculate Cost
+            </button>
+          </form>
+
+          <div id="calculationResult" class="calculation-result hidden">
+            <h3>Estimated Trip Cost</h3>
+            <div class="cost-breakdown">
+              <div class="cost-item">
+                <span>Base Cost:</span>
+                <span id="baseCost">$0</span>
+              </div>
+              <div class="cost-item">
+                <span>Additional Services:</span>
+                <span id="servicesCost">$0</span>
+              </div>
+              <div class="cost-item total">
+                <span>Total Cost:</span>
+                <span id="totalCost">$0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="services" class="section services-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Our Services</h2>
+        <div class="services-grid">
+          <div class="service-card" data-aos="fade-up">
+            <div class="service-icon">
+              <i class="fas fa-plane-departure"></i>
+            </div>
+            <h3>Flight Booking</h3>
+            <p>
+              Get the best deals on flights worldwide with our exclusive airline
+              partnerships.
+            </p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
+              <i class="fas fa-hotel"></i>
+            </div>
+            <h3>Hotel Reservations</h3>
+            <p>
+              Book luxury hotels and resorts at competitive prices around the
+              globe.
+            </p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+              <i class="fas fa-route"></i>
+            </div>
+            <h3>Tour Packages</h3>
+            <p>
+              Customized tour packages with experienced guides and detailed
+              itineraries.
+            </p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon">
+              <i class="fas fa-car"></i>
+            </div>
+            <h3>Transportation</h3>
+            <p>
+              Reliable airport transfers and car rentals for comfortable travel.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">What Our Travelers Say</h2>
+        <div class="testimonials-slider" data-aos="fade-up">
+          <div class="testimonials-container">
+            <div class="testimonial-card active">
+              <div class="testimonial-image">
+                <img src="./assets/user1.jpg" alt="User 1" />
+              </div>
+              <div class="testimonial-content">
+                <p>
+                  "An incredible experience! The team at Wanderlust made our
+                  dream vacation a reality. The attention to detail was
+                  remarkable."
+                </p>
+                <div class="testimonial-author">
+                  <h4>Sarah Johnson</h4>
+                  <span>Paris Tour</span>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-image">
+                <img src="./assets/user2.jpeg" alt="User 2" />
+              </div>
+              <div class="testimonial-content">
+                <p>
+                  "The trip calculator was super helpful in planning our budget.
+                  Everything was transparent and the final cost matched exactly
+                  what was calculated."
+                </p>
+                <div class="testimonial-author">
+                  <h4>Michael Chen</h4>
+                  <span>Tokyo Adventure</span>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-image">
+                <img src="./assets/user3.jpg" alt="User 3" />
+              </div>
+              <div class="testimonial-content">
+                <p>
+                  "Professional service from start to finish. The local guides
+                  were knowledgeable and friendly. Will definitely book again!"
+                </p>
+                <div class="testimonial-author">
+                  <h4>Emma Wilson</h4>
+                  <span>Bali Experience</span>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-controls">
+            <button class="prev-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="testimonial-dots"></div>
+            <button class="next-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Contact Us</h2>
+        <div class="contact-container" data-aos="fade-up">
+          <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p>Have questions about our services? Reach out to us!</p>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>123 Travel Street, Adventure City</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <span>+1 (555) 123-4567</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <span>info@wanderlust.com</span>
+            </div>
+          </div>
+          <form id="contactForm" class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loader hidden">
+                  <i class="fas fa-spinner fa-spin"></i>
+                </span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Wanderlust</h3>
+            <p>Making your travel dreams come true since 2024.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#destinations">Destinations</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Newsletter</h4>
+            <p>Subscribe for travel updates and exclusive offers.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Wanderlust. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- AOS Scripting -->
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+
+      const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+      const navLinks = document.querySelector(".nav-links");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
