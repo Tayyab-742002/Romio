@@ -44,9 +44,21 @@ body {
 }
 
 .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.5rem;
+  gap: 1rem;
   font-weight: bold;
+  color: var(--secondary-color);
+}
+.logo-span {
   color: var(--primary-color);
+  font-size: 1.7rem;
+}
+.logo-image {
+  max-height: 50px;
+  object-fit: contain;
 }
 
 .nav-links {
