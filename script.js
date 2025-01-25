@@ -186,7 +186,7 @@ contactForm.addEventListener("submit", function (e) {
 
   // Prepare form data
   const templateParams = {
-    to_email: "xdtayyab0@gmail.com",
+    to_email: "eviorxd@gmail.com",
     from_name: document.getElementById("name").value,
     from_email: document.getElementById("email").value,
     subject: document.getElementById("subject").value,
